@@ -1,0 +1,212 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f7f7ff;
+    background-image: url(/images/bg-bottom.svg);
+    background-repeat: no-repeat;
+    background-position-y:110%;
+    font-size: 15px;
+    font-weight: bold;
+    color: hsl(233, 13%, 49%);
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  #app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(/images/bg-top.svg);
+    background-repeat: no-repeat;
+    background-position-x: 110%;
+    
+  }
+  
+  h1 {
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+    
+  }
+  
+  h2 {
+    font-size: 48px;
+    width: 170px;
+    transition: 00.4s;
+    color: hsl(232, 13%, 33%);
+  }
+  
+  .radio-plan {
+    margin-bottom: 4vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 250px;
+  }
+  
+  
+  
+  .card-container {
+    padding-top: 4vh;
+    padding-bottom: 4vh;
+    display: flex;
+    align-items: center;
+
+  }
+  
+  .card {
+    width: 300px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 5px;
+    background-color: #fff;
+  }
+  
+  .pro {
+    height: 450px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-image: linear-gradient(120deg, #a0a3ef, #6d71df);
+    color: white;
+  }
+  .pro h2 {
+    color: white;
+  }
+  
+  .card .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 40%;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .card .text .line {
+    width: 80%;
+    height: 2px;
+    background-image: linear-gradient(120deg, #cbcdf5, #989ced);
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.3;
+  }
+  .card .text p {
+    padding: 15px 0;
+  }
+  
+  .card .btn {
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #ddd;
+    width: 80%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    background-color: #a0a3ef;
+    transition: 00.4s;
+  }
+  .pro .btn {
+    background-color: #fff;
+    color: #222;
+  }
+  
+  .btn:hover {
+    background-color: #fff;
+    color: #222;
+  }
+  
+  .pro .btn:hover {
+    background-color: #6d71df;
+    color: #fff;
+    border: 1px solid #a0a3ef;
+  }
+  
+  /* The switch - the box around the slider */
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #6d71df;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #6d71df;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  
+
+  @media (max-width:800px) {
+      .card-container {
+          flex-direction: column;
+          height: 1400px;
+          justify-content: space-between;
+      }
+      #app {
+        width: 100%;
+        background-position-x: 200px;
+      }
+      .card-container {
+          width: 100vw;
+      }
+      .card {
+          width: 90vw;
+      }
+  }
